@@ -13,9 +13,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jellyfin.Controller" Version="10.11.3" />
-    <PackageReference Include="Jellyfin.Model" Version="10.11.3" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.10" />
+    <PackageReference Include="Jellyfin.Controller" Version="10.11.3" PrivateAssets="All" />
+    <PackageReference Include="Jellyfin.Model" Version="10.11.3" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.10" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
