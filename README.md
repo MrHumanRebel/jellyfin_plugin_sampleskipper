@@ -4,6 +4,10 @@
 
 *A lightweight, automated plugin for Jellyfin that keeps your library clean.*
 
+<div align="center">
+<img src="https://www.google.com/search?q=https://raw.githubusercontent.com/MrHumanRebel/jellyfin-plugin-sampleskipper/main/sampleskipper_banner.png" style="max-width: 500px; width: 100%; height: auto;" alt="Sample Skipper Banner">
+</div>
+
 </div>
 
 ---
