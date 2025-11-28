@@ -2,18 +2,18 @@
   {
     "guid": "a4f5d6e7-1b2c-4d3e-5f6g-7h8i9j0k1l2m",
     "name": "Sample Skipper",
-    "description": "Ignores video files with the word 'sample' in the filename.",
+    "description": "Automatically ignores files containing 'sample' in the filename.",
     "overview": "A simple plugin that tells the library scanner to ignore any file containing the word 'sample'.",
     "owner": "MrHumanRebel",
     "category": "General",
+    "repository": "https://github.com/MrHumanRebel/jellyfin-plugin-sampleskipper",
     "versions": [
       {
         "version": "1.0.0.0",
         "changelog": "Initial Release for Jellyfin 10.11.3",
         "targetAbi": "10.11.3.0",
-        "sourceUrl": "https://github.com/MrHumanRebel/jellyfin-plugin-sampleskipper",
-        "timestamp": "2025-11-28T08:52:00Z",
-        "targetUrl": "https://github.com/MrHumanRebel/jellyfin-plugin-sampleskipper/releases/download/v1.0.0/SampleSkipper.zip"
+        "sourceUrl": "https://github.com/MrHumanRebel/jellyfin-plugin-sampleskipper/releases/download/v1.0.0/SampleSkipper.zip",
+        "timestamp": "2025-11-28T09:20:00Z"
       }
     ]
   }
