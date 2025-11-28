@@ -36,7 +36,7 @@ No more manual cleanup or cluttered folders — if a file has `sample` in its na
 
    - **Name:** `Sample Skipper Repo`  
    - **URL:**  
-     `https://raw.githubusercontent.com/MrHumanRebel/jellyfin-plugin-sampleskipper/main/manifest.json`
+     `https://raw.githubusercontent.com/MrHumanRebel/jellyfin_plugin_sampleskipper/main/manifest.json`
 
 5. Go to the **Catalog** tab, find **Sample Skipper**, and click **Install**.  
 6. **Restart Jellyfin** to load the plugin.
