@@ -10,12 +10,12 @@
     "imageUrl": "https://raw.githubusercontent.com/MrHumanRebel/jellyfin-plugin-sampleskipper/main/sampleskipper.png",
     "versions": [
       {
-        "version": "1.0.2",
+        "version": "1.0.1",
         "changelog": "Initial Release for Jellyfin 10.11.x",
         "targetAbi": "10.11.0.0",
-        "sourceUrl": "https://github.com/MrHumanRebel/jellyfin-plugin-sampleskipper/releases/download/v1.0.2/SampleSkipper.zip",
-        "checksum": "ae9630d33b6d4a21e67958b93eeffcb2",
-        "timestamp": "2025-11-28T10:41:48Z"
+        "sourceUrl": "https://github.com/MrHumanRebel/jellyfin-plugin-sampleskipper/releases/download/v1.0.1/SampleSkipper.zip",
+        "checksum": "8d02a17815b1cbaaf1a5c35326109e51",
+        "timestamp": "2025-11-28T10:54:31Z"
       }
     ]
   }
