@@ -6,7 +6,7 @@ using MediaBrowser.Model.Plugins;
 
 namespace Jellyfin.Plugin.SampleSkipper
 {
-    public class Plugin : BasePlugin
+    public class Plugin : BasePlugin<PluginConfiguration>
     {
         // This must match the GUID in manifest.json!
         public override Guid Id => Guid.Parse("5826df63-32c0-4822-9218-403d67f5370d");
@@ -17,9 +17,8 @@ namespace Jellyfin.Plugin.SampleSkipper
 
         public static Plugin Instance { get; private set; }
 
-        // FIX: Removed IXmlSerializer from the constructor because it causes a NullReference error at startup in 10.11!
-        public Plugin(IApplicationPaths applicationPaths) 
-            : base() 
+        public Plugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer)
+            : base(applicationPaths, xmlSerializer)
         {
             Instance = this;
         }
