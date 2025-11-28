@@ -5,16 +5,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <Version>1.0.0.0</Version>
-    <Authors>YourName</Authors>
-    <Company>YourCompany</Company>
+    <Authors>MrHumanRebel</Authors>
+    <Company>MrHumanRebel</Company>
     <Product>Jellyfin Sample Skipper</Product>
-    <Description>Automatically ignores files containing "sample" in the filename.</Description>
+    <Description>Automatikusan figyelmen kívül hagyja a "sample" tartalmú fájlokat.</Description>
     <PackageId>Jellyfin.Plugin.SampleSkipper</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jellyfin.Controller" Version="10.9.0" />
-    <PackageReference Include="Jellyfin.Model" Version="10.9.0" />
+    <PackageReference Include="Jellyfin.Controller" Version="10.11.3" />
+    <PackageReference Include="Jellyfin.Model" Version="10.11.3" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
