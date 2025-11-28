@@ -1,0 +1,42 @@
+name: Build and Release Plugin
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger on tags like v1.0.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore Dependencies
+      run: dotnet restore Jellyfin.Plugin.SampleSkipper/Jellyfin.Plugin.SampleSkipper.csproj
+
+    - name: Build Release
+      run: dotnet build Jellyfin.Plugin.SampleSkipper/Jellyfin.Plugin.SampleSkipper.csproj --configuration Release --no-restore
+
+    - name: Publish
+      run: dotnet publish Jellyfin.Plugin.SampleSkipper/Jellyfin.Plugin.SampleSkipper.csproj --configuration Release --no-build --output ./publish
+
+    - name: Zip the Plugin
+      run: |
+        cd publish
+        zip -r ../SampleSkipper.zip .
+        cd ..
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: SampleSkipper.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
