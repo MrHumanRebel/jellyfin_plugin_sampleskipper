@@ -2,13 +2,13 @@ using System;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Serialization;
-using MediaBrowser.Model.Plugins; // Important: This is needed for PluginInfo!
+using MediaBrowser.Model.Plugins;
 
 namespace Jellyfin.Plugin.SampleSkipper
 {
     public class Plugin : BasePlugin
     {
-        // IMPORTANT: This GUID MUST MATCH the one in manifest.json!
+        // This must match the GUID in manifest.json!
         public override Guid Id => Guid.Parse("5826df63-32c0-4822-9218-403d67f5370d");
 
         public override string Name => "Sample Skipper";
@@ -17,23 +17,21 @@ namespace Jellyfin.Plugin.SampleSkipper
 
         public static Plugin Instance { get; private set; }
 
-        public Plugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer) 
+        // FIX: Removed IXmlSerializer from the constructor because it causes a NullReference error at startup in 10.11!
+        public Plugin(IApplicationPaths applicationPaths) 
             : base() 
         {
             Instance = this;
         }
 
-        // FIX: We override GetPluginInfo to avoid BasePlugin crash in 10.11.x
         public override PluginInfo GetPluginInfo()
         {
-            // Jellyfin 10.11.x PluginInfo constructor requires specific arguments in order:
-            // (string name, Version version, string description, Guid id, bool canUninstall)
             return new PluginInfo(
                 this.Name,
                 this.Version,
                 this.Description,
                 this.Id,
-                true
+                true // CanUninstall
             );
         }
     }
