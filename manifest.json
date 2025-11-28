@@ -14,8 +14,8 @@
         "changelog": "Initial Release for Jellyfin 10.11.x",
         "targetAbi": "10.11.0.0",
         "sourceUrl": "https://github.com/MrHumanRebel/jellyfin_plugin_sampleskipper/releases/download/v1.0.0/SampleSkipper.zip",
-        "checksum": "bacff188257d9e9b4709928de632dd84",
-        "timestamp": "2025-11-28T08:34:31Z"
+        "checksum": "e1f1cab051827d8a6a28dd9c36417d68",
+        "timestamp": "2025-11-28T09:07:20Z"
       }
     ]
   }
