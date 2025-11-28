@@ -5,6 +5,10 @@ on:
     tags:
       - 'v*' # Trigger on tags like v1.0.0
 
+# JAVÍTÁS: Jogosultságot adunk a Release létrehozásához
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,9 +32,10 @@ jobs:
       run: dotnet publish Jellyfin.Plugin.SampleSkipper/Jellyfin.Plugin.SampleSkipper.csproj --configuration Release --no-build --output ./publish
 
     - name: Zip the Plugin
+      # JAVÍTÁS: Csak a saját DLL-ünket csomagoljuk be, hogy kicsi legyen a méret
       run: |
         cd publish
-        zip -r ../SampleSkipper.zip .
+        zip -r ../SampleSkipper.zip Jellyfin.Plugin.SampleSkipper.dll Jellyfin.Plugin.SampleSkipper.pdb
         cd ..
 
     - name: Create Release
