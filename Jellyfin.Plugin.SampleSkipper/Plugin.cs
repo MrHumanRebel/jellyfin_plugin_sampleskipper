@@ -17,9 +17,8 @@ namespace Jellyfin.Plugin.SampleSkipper
 
         public static Plugin Instance { get; private set; }
 
-        // FIX: Removed IXmlSerializer from the constructor because it causes a NullReference error at startup in 10.11!
-        public Plugin(IApplicationPaths applicationPaths) 
-            : base() 
+        public Plugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer)
+            : base(applicationPaths, xmlSerializer)
         {
             Instance = this;
         }
