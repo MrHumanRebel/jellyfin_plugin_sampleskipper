@@ -7,6 +7,7 @@
     "owner": "MrHumanRebel",
     "category": "General",
     "repository": "https://github.com/MrHumanRebel/jellyfin-plugin-sampleskipper",
+    "imageUrl": "https://raw.githubusercontent.com/MrHumanRebel/jellyfin-plugin-sampleskipper/main/sampleskipper.png",
     "versions": [
       {
         "version": "1.0.0.0",
