@@ -17,8 +17,8 @@ namespace Jellyfin.Plugin.SampleSkipper
 
         public static Plugin Instance { get; private set; }
 
-        public Plugin(IApplicationPaths applicationPaths)
-            : base(applicationPaths)
+        public Plugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer)
+            : base(applicationPaths, xmlSerializer)
         {
             Instance = this;
         }
