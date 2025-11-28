@@ -5,7 +5,7 @@
 *A lightweight, automated plugin for Jellyfin that keeps your library clean.*
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/MrHumanRebel/jellyfin_plugin_sampleskipper/main/sampleskipper.png" style="max-width: 500px; width: 100%; height: auto;" alt="Sample Skipper Banner">
+<img src="https://raw.githubusercontent.com/MrHumanRebel/jellyfin_plugin_sampleskipper/main/sampleskipper.png" style="max-width: 200px; width: 100%; height: auto;" alt="Sample Skipper Banner">
 </div>
 
 </div>
