@@ -44,21 +44,29 @@ jobs:
 
         # 2. Set variables
         VERSION=${{ github.ref_name }} # e.g., v1.0.0
-        # Construct URL based on version
+        # Strip leading 'v' for manifest version (v1.0.3 -> 1.0.3)
+        MANIFEST_VERSION=${VERSION#v}
+
+        # Construct URL based on version tag
         DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/$VERSION/SampleSkipper.zip"
         # Current time in UTC (ISO 8601 format)
         TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
         # 3. Update manifest.json using jq
-        # This command writes the checksum, url, and timestamp into the JSON
+        # This command writes the checksum, url, timestamp AND version into the JSON
         jq --arg checksum "$MD5_HASH" \
            --arg url "$DOWNLOAD_URL" \
            --arg timestamp "$TIMESTAMP" \
-           '.[0].versions[0].checksum = $checksum | .[0].versions[0].sourceUrl = $url | .[0].versions[0].timestamp = $timestamp' \
+           --arg version "$MANIFEST_VERSION" \
+           '.[0].versions[0].checksum = $checksum
+            | .[0].versions[0].sourceUrl = $url
+            | .[0].versions[0].timestamp = $timestamp
+            | .[0].versions[0].version = $version' \
            manifest.json > manifest.tmp && mv manifest.tmp manifest.json
 
         # Print manifest to log for verification
         cat manifest.json
+
 
     - name: Commit & Push Updated Manifest
       run: |
