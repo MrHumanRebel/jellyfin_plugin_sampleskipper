@@ -26,7 +26,7 @@ No more manual cleanup or cluttered folders — if a file has `sample` in its na
 
 ## 🚀 Features
 
-- **Automatic Detection** – Seamless integration with the Jellyfin library scanner.  
+- **Automatic Detection** – Seamless integration with the Jellyfin library scanner, ignoring both files and directories containing "sample".
 - **Case Insensitive** – Detects `sample`, `Sample`, `SAMPLE`, or any variation.  
 - **Zero Config** – Install it and forget it; it works out of the box.  
 - **Lightweight** – Minimal impact on scan performance.  
@@ -68,7 +68,7 @@ No more manual cleanup or cluttered folders — if a file has `sample` in its na
 
 ### Requirements
 
-- [.NET 9.0 SDK](https://dotnet.microsoft.com/)
+- [.NET 9.0.10 SDK](https://dotnet.microsoft.com/)
 
 ### Steps
 
